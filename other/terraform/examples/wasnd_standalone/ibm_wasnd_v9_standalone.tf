@@ -408,7 +408,7 @@ module "infoblox_integration" {
 }
 
 module "provision_proxy" {
-  source 						= "git::https://github.com/IBM-CAMHub-Open/terraform-modules.git?ref=1.0//vmware/proxy"
+  source 						= "git::https://github.com/IBM-CAMHub-Development/terraform-modules.git?ref=1.0//vmware/proxy"
   ip                  = "${module.infoblox_integration.assigned_ip_address}"
   id									= "${vsphere_virtual_machine.WASNode01.id}"
   ssh_user            = "${var.WASNode01-os_admin_user}"
